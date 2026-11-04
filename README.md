@@ -5,7 +5,9 @@ Casks dos apps de NovaisVictor.
 ## NotchFull
 
 ```bash
-brew install --cask novaisvictor/tap/notchfull
+brew tap novaisvictor/tap
+brew trust novaisvictor/tap
+brew install --cask notchfull
 ```
 
 O NotchFull ainda não é notarizado. Na primeira abertura, libere em
