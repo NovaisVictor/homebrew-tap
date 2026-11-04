@@ -1,6 +1,6 @@
 cask "notchfull" do
-  version "0.1.0"
-  sha256 "c490ade005d5b41d1cc4b5751b0221ddbd959fcb0a656035b47ace7febaac327"
+  version "0.1.1"
+  sha256 "51de4c38af5426a63822e137f982b9b19d1d2463202a229bcfa8b3360be674a6"
 
   url "https://github.com/NovaisVictor/notchFull/releases/download/v#{version}/NotchFull-#{version}.zip"
   name "NotchFull"
