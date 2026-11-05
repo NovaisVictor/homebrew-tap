@@ -1,13 +1,14 @@
-cask "hyprmac" do # Generated from packaging/hyprmac.rb.template by .github/workflows/release.yml
-  version "0.1.1"
-  sha256 "9a9c66b24104ef3b2b797384ca738b5afb93959eb6b26d63396859ae9965c8be"
+cask "hyprmac" do # Generated from packaging/hyprmac.rb.template by script/publish-release.sh
+  version "0.1.2"
+  sha256 "cc90c4605442000706bc7f942acac0383318f49384abdc63db58697827bc3581"
 
   url "https://github.com/NovaisVictor/HyprMac/releases/download/v#{version}/HyprMac-#{version}.zip"
   name "HyprMac"
-  desc "AeroSpace-based tiling window manager with Hyprland-like features"
+  desc "i3-like tiling window manager with Hyprland-like features"
   homepage "https://github.com/NovaisVictor/HyprMac"
 
   depends_on macos: :ventura # macOS 13, Package.swift: platforms: [.macOS(.v13)]
+  depends_on arch: :arm64 # build-release.sh builds Apple Silicon binaries only
 
   postflight_steps do
     run "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "{{staged_path}}/HyprMac-#{version}/bin/hyprmac"], must_succeed: false
