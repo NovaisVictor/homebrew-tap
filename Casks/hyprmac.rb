@@ -1,6 +1,6 @@
 cask "hyprmac" do # Generated from packaging/hyprmac.rb.template by script/publish-release.sh
-  version "0.1.2"
-  sha256 "cc90c4605442000706bc7f942acac0383318f49384abdc63db58697827bc3581"
+  version "0.1.3"
+  sha256 "3d4b604b5ca0ad711866f90199e74985313c77bec127fb56b2e8d9cd0c1228e3"
 
   url "https://github.com/NovaisVictor/HyprMac/releases/download/v#{version}/HyprMac-#{version}.zip"
   name "HyprMac"
