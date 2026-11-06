@@ -1,6 +1,6 @@
 cask "hyprmac" do # Generated from packaging/hyprmac.rb.template by script/publish-release.sh
-  version "0.1.4"
-  sha256 "945f90ac22f99ea0e1db3dd75d57a916e021200d22023a8dfe0ce57595345747"
+  version "0.1.5"
+  sha256 "0290b2d2e815fe52a642d85d8ecbb930222f885e33e5137a6b31ce9acd2a3e58"
 
   url "https://github.com/NovaisVictor/HyprMac/releases/download/v#{version}/HyprMac-#{version}.zip"
   name "HyprMac"
@@ -91,11 +91,8 @@ cask "hyprmac" do # Generated from packaging/hyprmac.rb.template by script/publi
   ]
 
   caveats <<~EOS
-    HyprMac is ad-hoc signed and not notarized.
+    HyprMac is signed with a self-signed certificate and not notarized.
     If macOS refuses to open it, remove the quarantine attribute:
       xattr -dr com.apple.quarantine /Applications/HyprMac.app
-
-    The ad-hoc signature changes with every release, so macOS asks for the
-    Accessibility permission again after each update.
   EOS
 end
